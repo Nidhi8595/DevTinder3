@@ -593,11 +593,10 @@ const Profile = () => {
 
 // Feed Component (Placeholder for now)
 const Feed = () => {
-  const { state } = useAuth();
+  const { state, dispatch } = useAuth();
   const navigate = useNavigate();
 
   const logout = () => {
-    const { dispatch } = useAuth();
     dispatch({ type: 'LOGOUT' });
     navigate('/');
   };
