@@ -84,6 +84,7 @@ class User(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     name: str
     email: EmailStr
+    password: str  # Added missing password field
     bio: Optional[str] = ""
     skills: List[str] = []
     interests: List[str] = []
